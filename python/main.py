@@ -1,14 +1,15 @@
 import requests
 import json
 
-
+print("ask for the temerture...")
+x=input()
 headers = {
     'Authorization': 'Bearer NDE5TQ3JWRA327RQF2USO4TIQ7SW234B',
 }
 
 params = (
     ('v', '20200819'),
-    ('q', 'what is the tempatare'),
+    ('q', x),
 )
 
 response = requests.get('https://api.wit.ai/message', headers=headers, params=params)
